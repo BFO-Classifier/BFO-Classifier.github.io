@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="BFO, BFO 2.0, BFO2.0, BFO2, BFO 2, classifier, ontology, protege, protégé, owl, web ontology language, basic formal ontology">
+	<meta name="description" content="BFO 2.0 Entity Classifier for Ontologies in OWL.">
+	<title>Home</title>
+	<link rel="stylesheet" href="resources/.css/nicepage.css" media="screen">
+	<link rel="icon" href="resources/.media/images/logo-small.png">
+	<meta property="og:title" content="Home">
+	<meta property="og:type" content="website">
+	<link rel="canonical" href="index.html">
+	<meta property="og:url" content="index.html">
+</head>
+<body>
+	<header id="top-navbar">
+		<nav class="navbar navbar-default">
+			<a href="https://github.com/SteveWang7596/BFO_2_0_DecisionDiagram/">
+				<img src="resources/.media/images/logo-small.png" class="page-image" height="60vh" alt="Home" style="padding: 5px 0 0 5px;"/>
+				<span class="page-title"><h3>BFO 2.0 Classifier</h3></span>
+			</a>
+			<ul class="ui-menu navbar-right list-inline" style="padding-top: 15.5px;">
+				<li class="ui-menu-item"><a href="#About">
+					<h4>About</h4>
+				</a></li>
+				<li class="ui-menu-item"><a href="#Help">
+					<h4>Help</h4></a>
+				</li>
+				<li class="ui-menu-item"><a href="#Get">
+					<h4>Download</h4></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+	<div style="padding-bottom: 45px;"><!-- vertical placeholder --></div>
+	<div align="center">
+		<img src="resources/.media/images/logo.png" height="237vh" alt="Logo" id="Logo"/>
+		<h1>BFO 2.0 Classifier</h1>
+		<div class="custom-block-md" align="justify">
+		<h4>
+			An entity classifier for ontologies written in OWL (Web Ontology Language), that allows users to add entities to the correct class in the BFO (Basic Formal Ontology) foundational ontology structure.
+		</h4>
+		<div style="padding-bottom: 5px;"><!-- vertical placeholder --></div>
+		</div>
+		<div id="About" class="custom-main-text orange-bg">
+			<br>
+			<p align="left">The BFO Classifier tool was developed by Chiadika Emeruem and Steve Wang, students in the Department of Computer Science at the University of Cape Town, South Africa, under the supervision of Prof. Maria Keet.</p>
+			<p align="left">This tool is the result of a project to create a classifier for ontology entities according to BFO classes. This decision process enables users to place entities from their domain ontology, by answering a series of questions and following the path down the tree.<br></p>
+			<img src="https://github.com/SteveWang7596/BFO_2_0_DecisionDiagram/blob/main/BFO-decision-diagram.png" alt="Decision diagram used by the BFO 2.0 Classifier.">
+			<br>
+			<br>
+		</div>
+		<br>
+		<div id="Get" class="custom-main-text">
+			<br>
+			<a href="https://github.com/SteveWang7596/BFO_2_0_DecisionDiagram/tree/dev_branch#readme">
+				<div>
+					<span><img src="resources/.media/images/octocat.png" width="80px" alt="link to Github repo."></span>
+					<h3>Visit the repo on Github to get the tool.</h3>
+					<p><br><br><br></p>
+				</div>
+			</a>
+		</div>
+		<div id="Help" class="custom-main-text orange-bg">
+			<br>
+			<div align="justify">
+				<h2>How To Guide</h2>
+				<h3>Loading an OWL ontology document</h3>
+				<p>There are three ways to load an OWL ontology document. The first is a browse button next to the "OWL File" display box which opens a file picker that allows you to select which OWL ontology document you want to load. The other two options do the same thing. <br>Option 1: On the menu bar, select <b>File > Load OWL file</b>.<br>Option 2: The keyboard shortcut "<i>Ctrl+Shift+L</i>".</p>
+				<br>
+				<h3>Navigating the Decision Tree</h3>
+				<p>To begin, enter the name of the class into the text box labelled "Class label" and click on "Confirm". Once the class name has been confirmed the first question will appear in the text area directly below and the "Next Question" button as well as the dropdown will be enabled. Select the appropriate response to the question from the dropdown selection. If none of the available options apply, you may choose to use the axiom at the bottom of the screen or return to previous questions. After selecting a response from the dropdown selection, click on "Next Question" to continue the classification process. Note that you may click on "Previous Question" at any point during the process to undo the latest selection.</p>
+				<br>
+				<h3>Importing an Axiom</h3>
+				<p>Once you have found the BFO classification that best describes the chosen class, you may choose to import the subclass axiom into an OWL ontology document. To do so, click on "Import Axiom". If you have not yet loaded an OWL file, the option to create an untitled ontology BFO-merged document will be presented to you. If you decline that option, you may choose to load your local ontology document and click on "Import Axiom" again.</p>
+				<br>
+				<h3>Restarting the Decision Tree</h3>
+				<p>To restart the classification process for the current OWL class, from the menu bar, select <b>Edit > Restart</b>. Alternatively, use the keyboard shortcut "<i>Ctrl+R</i>".</p>
+				<br>
+				<h3>Choosing a Different Class</h3>
+				<p>To change the OWL class, from the menu bar, select <b>Edit > Change Class</b> or use the keyboard shortcut "<i>Ctrl+Shift+R</i>", and the decision process will be reset with the option to change the class name. Once you have changed the class name, click on "Confirm" to begin.</p>
+				<br>
+			</div>
+		</div>
+	</div>
+	</main>
+	<footer>
+		<a href="#Logo" style="text-decoration-color: #ff8a00;">
+			<p style="color: #ff8b00;"><i>back to top</i></p>
+		</a>
+		<!-- cite>Developed by:  at the Department of Computer Science, University of Cape Town. Supervised by: Prof. Maria Keet.</cite-->
+		<span style="background: #808080; color: #ffffff; padding: 0px 10px 0px 5px;">
+			<cite>&copy; 2021</cite>
+		</span>
+		<cite style="padding-left: 10px;">Chiadika Emeruem, Steve Wang <strong>&middot;</strong> Prof. Maria Keet</cite>
+		<span style="float: right;">Department of Computer Science <strong>&middot;</strong> University of Cape Town</span>
+	</footer>
+</body>
+</html>
