@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="BFO, BFO 2.0, BFO2.0, BFO2, BFO 2, classifier, ontology, protege, protégé, owl, web ontology language, basic formal ontology">
 	<meta name="description" content="BFO 2.0 Entity Classifier for Ontologies in OWL.">
-	<title>Home</title>
+	<title>BFO 2.0 Classifier</title>
 	<link rel="stylesheet" href="resources/css/nicepage.css" media="screen">
 	<link rel="icon" href="resources/media/images/logo-small.png">
 	<meta property="og:title" content="Home">
@@ -17,19 +17,23 @@
 <body>
 	<header id="top-navbar">
 		<nav class="navbar navbar-default">
-			<a href="https://github.com/SteveWang7596/BFO_2_0_DecisionDiagram/">
-				<img src="resources/media/images/logo-small.png" class="page-image" height="60vh" alt="Home" style="padding: 5px 0 0 5px;"/>
-				<span class="page-title"><h3>BFO 2.0 Classifier</h3></span>
-			</a>
-			<ul class="ui-menu navbar-right list-inline" style="padding-top: 15.5px;">
-				<li class="ui-menu-item"><a href="#About"><h4>About</h4></a></li>
-				<li class="ui-menu-item"><a href="#Help"><h4>Help</h4></a></li>
-				<li class="ui-menu-item"><a href="#Get"><h4>Download</h4></a></li>
-			</ul>
+			<span class="navbar-left">
+				<a href="https://github.com/SteveWang7596/BFO_2_0_DecisionDiagram#readme">
+					<img src="resources/media/images/logo-small.png" class="page-image" height="60vh" alt="Home" style="padding: 5px 0 0 5px;"/>
+					<span class="page-title"><h3>BFO 2.0 Classifier</h3></span>
+				</a>
+			</span>
+			<span class="navbar-right">
+				<ul class="ui-menu list-inline" style="padding-top: 15.5px;">
+					<li class="ui-menu-item"><a href="#About"><h4>About</h4></a></li>
+					<li class="ui-menu-item"><a href="#Help"><h4>Help</h4></a></li>
+					<li class="ui-menu-item"><a href="#Get"><h4>Download</h4></a></li>
+				</ul>
+			</span>
 		</nav>
 	</header>
 	<main>
-	<div style="padding-bottom: 45px;"><!-- vertical placeholder --></div>
+	<div style="padding-bottom: 25px;"><!-- vertical placeholder --></div>
 	<div align="center">
 		<img src="resources/media/images/logo.png" height="237vh" alt="Logo" id="Logo"/>
 		<h1>BFO 2.0 Classifier</h1>
@@ -41,10 +45,13 @@
 		</div>
 		<div id="About" class="custom-main-text orange-bg">
 			<br>
-			<p align="left">The BFO Classifier tool was developed by Chiadika Emeruem and Steve Wang, students in the Department of Computer Science at the University of Cape Town, South Africa, under the supervision of Prof. Maria Keet.</p>
-			<p align="left">This tool is the result of a project to create a classifier for ontology entities according to BFO classes. This decision process enables users to place entities from their domain ontology, by answering a series of questions and following the path down the tree.<br></p>
-			<img src="https://github.com/SteveWang7596/BFO_2_0_DecisionDiagram/blob/main/BFO-decision-diagram.png" alt="Decision diagram used by the BFO 2.0 Classifier.">
-			<br>
+			<div align="justify">
+				<p>The BFO Classifier tool was developed by Chiadika Emeruem and Steve Wang, students in the Department of Computer Science at the University of Cape Town, South Africa, under the supervision of Prof. Maria Keet.</p>
+				<p>This tool is a result of a project to create a classifier for ontology entities according to BFO classes. It was developed based on the following decision diagram, which enables one to place entities from a domain ontology in the appropriate position in the BFO T-Box heirarchy. The decision process works by using the answers to a series of questions to navigate a path down the tree, until the corresponding BFO class is reached.</p>
+				<div style="height: 40vh; overflow: auto;">
+					<img src="resources/media/images/BFO_2_0_DecisionDiagram.png" class="image-zoom-35" alt="Decision diagram used by the BFO 2.0 Classifier.">
+				</div>
+			</div>
 			<br>
 		</div>
 		<br>
@@ -52,9 +59,9 @@
 			<br>
 			<a href="https://github.com/SteveWang7596/BFO_2_0_DecisionDiagram/#readme">
 				<div>
-					<span><img src="resources/media/images/Octocat.png" width="80px" alt="link to Github repo."></span>
-					<h3>Visit the repo on Github to get BFO 2.0 Classifier v1.0.0.</h3>
-					<p><br><br><br></p>
+					<span><img src="resources/media/images/Github.png" width="100px" alt="link to Github repo."></span>
+					<h3>Get <strong>BFO 2.0 Classifier v1.0.0</strong> from Github.</h3>
+					<br>
 				</div>
 			</a>
 		</div>
@@ -62,22 +69,78 @@
 			<br>
 			<div align="justify">
 				<h2>How To Guide</h2>
-				<h3>Loading an OWL ontology document</h3>
-				<p>There are three ways to load an OWL ontology document. The first is a browse button next to the "OWL File" display box which opens a file picker that allows you to select which OWL ontology document you want to load. The other two options do the same thing. <br>Option 1: On the menu bar, select <b>File > Load OWL file</b>.<br>Option 2: The keyboard shortcut "<i>Ctrl+Shift+L</i>".</p>
-				<br>
-				<h3>Navigating the Decision Tree</h3>
-				<p>To begin, enter the name of the class into the text box labelled "Class label" and click on "Confirm". Once the class name has been confirmed the first question will appear in the text area directly below and the "Next Question" button as well as the dropdown will be enabled. Select the appropriate response to the question from the dropdown selection. If none of the available options apply, you may choose to use the axiom at the bottom of the screen or return to previous questions. After selecting a response from the dropdown selection, click on "Next Question" to continue the classification process. Note that you may click on "Previous Question" at any point during the process to undo the latest selection.</p>
-				<br>
-				<h3>Importing an Axiom</h3>
-				<p>Once you have found the BFO classification that best describes the chosen class, you may choose to import the subclass axiom into an OWL ontology document. To do so, click on "Import Axiom". If you have not yet loaded an OWL file, the option to create an untitled ontology BFO-merged document will be presented to you. If you decline that option, you may choose to load your local ontology document and click on "Import Axiom" again.</p>
-				<br>
-				<h3>Restarting the Decision Tree</h3>
-				<p>To restart the classification process for the current OWL class, from the menu bar, select <b>Edit > Restart</b>. Alternatively, use the keyboard shortcut "<i>Ctrl+R</i>".</p>
-				<br>
-				<h3>Choosing a Different Class</h3>
-				<p>To change the OWL class, from the menu bar, select <b>Edit > Change Class</b> or use the keyboard shortcut "<i>Ctrl+Shift+R</i>", and the decision process will be reset with the option to change the class name. Once you have changed the class name, click on "Confirm" to begin.</p>
-				<br>
+				<details id="How-to-Load" open>
+					<summary><h3>Loading an OWL ontology document</h3></summary>
+					<dl>
+						<dt>Option 1:</dt>
+						<dd>
+							Click on the  browse button next to the "OWL File" display box.
+						</dd>
+						<dt>Option 2:</dt>
+						<dd>
+							On the menu bar, select <mark>File</mark> <strong>&#x203A;</strong> <mark>Load OWL file</mark>.
+						</dd>
+						<dt>Option 3:</dt>
+						<dd>
+							The keyboard shortcut "<i>Ctrl+Shift+L</i>".
+						</dd>
+					</dl>
+					<p>Each of these opens a file picker that allows you to select which OWL ontology document you want to load.</p>
+					<details>
+						<summary align="right" dir="rtl">
+							<small>Loading an OWL document: Visual aid</small>
+						</summary>
+						<div class="container" style="overflow-x: auto; overflow-y: hidden; height: 94px;  margin-left: -15px;" align="justify">
+							<img src="resources/media/images/file-menu.gif" alt="Loading an OWL document: Visual aid">
+						</div><br>
+					</details>
+				</details>
+				<!--br-->
+				<details id="How-to-Navigate">
+					<summary><h3>Navigating the Decision Process</h3></summary>
+					<p>To begin, enter the name of the class into the text box labelled "Class label" and click on "Confirm". Once the class name has been confirmed the first question will appear in the text area directly above the dropdown component and the "Next Question" button as well as the dropdown will be enabled. Select the appropriate response to the question from the dropdown selection. If none of the available options apply, you may choose to use the axiom at the bottom of the screen or return to previous questions. After selecting a response from the dropdown selection, click on "Next Question" to continue the classification process. Note that you may click on "Previous Question" at any point during the process to undo the latest selection.</p>
+					<details>
+						<summary align="right" dir="rtl">
+							<small>Navigating the Decision Process: Visual aid</small>
+						</summary>
+						<div class="container" style="overflow-x: auto;overflow-y: hidden; height: 154px; margin-left: -15px" align="justify">
+							<img src="resources/media/images/choose-name.gif" alt="Screenshot of BFO 2.0 Classifier v1.0.0 GUI">
+						</div><br>
+					</details>
+				</details>
+				<!--br-->
+				<details id="How-to-Import">
+					<summary><h3>Importing an Axiom</h3></summary>
+					<p>Once you have found the BFO classification that best describes the chosen class, you may choose to import the subclass axiom into an OWL ontology document. To do so, click on "Import Axiom". If you have not yet loaded an OWL file, the option to create an untitled ontology BFO-merged document will be presented to you. If you decline that option, you may choose to load your local ontology document and click on "Import Axiom" again.</p>
+				</details>
+				<!--br-->
+				<details id="How-to-Restart">
+					<summary><h3>Restarting the Decision Process</h3></summary>
+					<p>To restart the classification process for the current OWL class, from the menu bar, select <mark>Edit</mark> <strong>&#x203A;</strong> <mark>Restart</mark>. Alternatively, use the keyboard shortcut "<i>Ctrl+R</i>".</p>
+					<details>
+						<summary align="right" dir="rtl">
+							<small>Restarting the Decision Process: Visual aid</small>
+						</summary>
+						<div class="container" style="overflow-x: auto; overflow-y: hidden; height: 102px;  margin-left: -15px;" align="justify">
+							<img src="resources/media/images/edit-menu-restart.png" alt="Restarting the Decision Process: Visual aid">
+						</div><br>
+					</details>
+				</details>
+				<!--br-->
+				<details id="How-to-New">
+					<summary><h3>Choosing a Different Class</h3></summary>
+					<p>To change the OWL class, from the menu bar, select <mark>Edit</mark> <strong>&#x203A;</strong> <mark>Change Class</mark> or use the keyboard shortcut "<i>Ctrl+Shift+R</i>", and the decision process will be reset with the option to change the class name. Once you have changed the class name, click on "Confirm" to begin.</p>
+					<details>
+						<summary align="right" dir="rtl">
+							<small>Restarting the Decision Process: Visual aid</small>
+						</summary>
+						<div class="container" style="overflow-x: auto; overflow-y: hidden; height: 102px;  margin-left: -15px;" align="justify">
+							<img src="resources/media/images/edit-menu-class.png" alt="Restarting the Decision Process: Visual aid">
+						</div><br>
+					</details>
+				</details>
 			</div>
+			<br>
 		</div>
 	</div>
 	</main>

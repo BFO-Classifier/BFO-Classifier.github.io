@@ -1674,6 +1674,36 @@ summary {
   display: block;
 }
 
+details {
+  padding-left: 0.5em;
+  padding-right: 2em;
+}
+
+summary {
+  display: flex;
+  background-color: rgba(255, 140, 0, 0.25);
+  justify-content: space-between;
+  border-radius: 1em 2em;
+  padding-left: 1em;
+  margin-left: -1em;
+  margin-right: -2em;
+}
+
+summary::after {
+  content: "\203A ";
+  font-size: 400%;
+  transform: rotate(90deg) translate(-10px);
+}
+
+details[open] > summary::after {
+  transform: rotate(270deg) translate(10px) translateY(-15px);
+}
+
+summary:hover {
+  background-color: rgba(255, 140, 0, 0.45);
+  color: #fff;
+}
+
 audio,
 canvas,
 progress,
@@ -2096,7 +2126,7 @@ small,
 mark,
 .mark {
   background-color: #fcf8e3;
-  padding: .2em;
+  padding: 0 .2em;
 }
 
 .text-left {
@@ -6582,15 +6612,43 @@ body,
 label,
 select,
 input,
-textarea,
+textarea {
+    font-family:
+    	/* Safari for OS X and iOS (San Francisco) */
+    	-apple-system,
+    	/* Chrome < 56 for OS X (San Francisco) */
+    	BlinkMacSystemFont,
+    	/* Basic web fallback */
+    	"Segoe UI", "Roboto", "Arial", "Helvetica Neue", "sans-serif",
+    	/* Emoji fonts */
+    	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+footer,
 h4,
 h5,
 h6 {
-    font-family: "Roboto", "Arial","sans-serif";
+    font-family:
+    	/* Safari for OS X and iOS (San Francisco) */
+    	-apple-system,
+    	/* Chrome < 56 for OS X (San Francisco) */
+    	BlinkMacSystemFont,
+    	/* Basic web fallback */
+    	"Roboto", "Arial", "Helvetica Neue", "sans-serif",
+    	/* Emoji fonts */
+    	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1,h2,h3 {
-    font-family: "Roboto","Trebuchet MS","Tahoma","Verdana","Arial","sans-serif";
+    font-family:
+    	/* Safari for OS X and iOS (San Francisco) */
+    	-apple-system,
+    	/* Chrome < 56 for OS X (San Francisco) */
+    	BlinkMacSystemFont,
+    	/* Basic web fallback */
+    	"Roboto","Trebuchet MS","Tahoma","Verdana","Helvetica Neue","Arial","sans-serif",
+    	/* Emoji fonts */
+    	"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-weight: 400;
 }
 
@@ -7547,7 +7605,7 @@ box-shadow: none;
     display: flex;
     flex-wrap: wrap;
 }
-         
+
 @media (max-width: 991px) {
     .custom-block .split-layout .row {
         display: block;
@@ -7621,7 +7679,7 @@ box-shadow: none;
 
 .custom-block .split-layout:not(.fixed) .image-block {
     max-width: 850px;
-} 
+}
 
 @media (max-width: 1199px) {
     .custom-block .split-layout .text-block {
@@ -7756,7 +7814,7 @@ box-shadow: none;
 
 @media (min-width: 892px) and (max-width: 1060px) {
     .custom-block .layout-row > .cell-size-4,
-    .custom-block .layout-row > .cell-size-5, 
+    .custom-block .layout-row > .cell-size-5,
     .custom-block .layout-row > .cell-size-6 {
         flex: 0 0 33%;
         max-width: 33%;
@@ -8153,7 +8211,7 @@ box-shadow: none;
     position: absolute;
 	    line-height: 19px;
 	    top: 6px;
-	    right: 10px; 
+	    right: 10px;
 	    font-size: 32px;
 	    font-weight: 700;
 	    line-height: 1;
@@ -8172,7 +8230,7 @@ box-shadow: none;
 .modal__close--x {
     z-index: 1;
 }
-	
+
 /* Hint Download CSS */
 .u-responsive-sm .download-hint,
 .u-responsive-xs .download-hint,
@@ -8184,7 +8242,7 @@ box-shadow: none;
 	position: relative;
 	z-index: 1000;
 }
-        
+
 .download-hint .hint-background {
     height: 320px;
     width: 100px;
@@ -8193,7 +8251,7 @@ box-shadow: none;
     opacity: 0.8;
     margin-left: 60px;
 }
-        
+
 .download-hint .hint-container {
     height: 325px;
     width: 100px;
@@ -8203,7 +8261,7 @@ box-shadow: none;
     margin-left: 60px;
     text-align: center;
 }
-        
+
 .download-hint .hint-message {
     color: #ffffff;
     font-family: Monserrat, sans-serif;
@@ -8214,7 +8272,7 @@ box-shadow: none;
     line-height: 1.2;
 	text-shadow: -1px -1px 0 #333,  1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
 }
-        
+
 .download-hint .hint-arrow {
     font-size: 42px;
     bottom: 30px;
@@ -8230,7 +8288,7 @@ box-shadow: none;
     animation-play-state: running;
     z-index: 1000;
 }
-      
+
 .download-hint-top.download-hint .hint-container {
     top: -55px;
     right: 80px;
@@ -8239,36 +8297,36 @@ box-shadow: none;
 .download-hint-top.download-hint .hint-arrow {
     transform: rotate(180deg);
 }
-	
+
 .download-hint-top.download-hint .hint-message {
     position: absolute;
     top: 320px;
     right: 5px;
 }
-  
+
 @keyframes download-hint-arrow-animation {
     0% {
         bottom: 0;
     }
-        
+
     50% {
         bottom: 25px;
     }
-        
+
     100% {
         bottom: 0;
     }
 }
-        
+
 @-webkit-keyframes download-hint-arrow-animation {
     0% {
         bottom: 0;
     }
-        
+
     50% {
         bottom: 25px;
     }
-        
+
     100% {
         bottom: 0;
     }
@@ -8481,12 +8539,12 @@ input.form-control[type="password"] {
 .thumbnails-grid .nav-buttons {
     text-align: center;
 }
-        
+
 .thumbnails-grid .nav-buttons a {
     background-color: #4399fa;
     color: #fff;
     -ms-border-radius: 25px;
-    border-radius: 25px; 
+    border-radius: 25px;
     padding: 10px 50px;
 }
 
@@ -8577,7 +8635,7 @@ a.demo-link:hover {
     text-decoration: none;
 }
 
-.product-type-filter .page-tab, 
+.product-type-filter .page-tab,
 .product-type-filter .block-tab {
     font-size: 14px;
 }
@@ -8646,11 +8704,11 @@ a.demo-link:hover {
 }
 
 .span-selected {
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 .switch-label-font {
-  font-weight: 500;   
+  font-weight: 500;
 }
 /*toggle button end*/
 
@@ -8662,17 +8720,47 @@ a.demo-link:hover {
 }
 
 .custom-block-md {
-	display: inline-block;
-	width: 50vw;
+  display: inline-block;
+  width: 50vw;
 }
 
 .orange-bg {
-	background: #ffa500;
+  background: #ffa500;
 }
 
 #strong{
-	font-size: 120%;
+  font-size: 120%;
 }
+
+.image-zoom-35{
+  zoom: 0.35;
+}
+
+.image-zoom-70{
+  zoom: 0.7;
+}
+
+details > details {
+  padding-left: 0.2em;
+  margin-left: 0;
+}
+
+details > details > summary {
+  display: list-item;
+  background-color: inherit;
+  border-radius: 2em;
+}
+
+details > details[open] > summary {
+  background-color: rgba(255, 140, 0, 0.45);
+}
+
+details > details > summary::after {
+  content: " ";
+  font-size: inherit;
+  transform: none;
+}
+/*EDIT SCROLLBAR STYLE*/
 /*custom-block end*/
 
 .zoom-in-entire-webpage {
